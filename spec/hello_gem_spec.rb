@@ -5,7 +5,9 @@ RSpec.describe HelloGem do
     expect(HelloGem::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe "#hi" do
+    it "returns a greeting" do
+      expect(HelloGem.hi).to eq("Hi there!")
+    end
   end
 end
